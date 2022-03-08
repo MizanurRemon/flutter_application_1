@@ -78,7 +78,7 @@ class myHomePageState extends State<HomeClass> {
           child: Center(
             child: TextButton(
                 onPressed: () {
-                  show_toast("Its a TextView");
+                  show_toast("Its a Text");
                 },
                 child: Text(
                   "message " + a.toString() + " times",
