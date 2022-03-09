@@ -70,23 +70,71 @@ class myHomePageState extends State<HomeClass> {
     });
   }
 
+  final myController = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Center(
-            child: TextButton(
-                onPressed: () {
-                  show_toast("Its a Text");
-                },
-                child: Text(
-                  "message " + a.toString() + " times",
-                  style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 0, 0, 0)),
-                )),
+        body: Container(
+          color: Colors.orange,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Container(
+                  color: Colors.white,
+                  child: Center(
+                    child: TextButton(
+                        onPressed: () {
+                          show_toast("Its a Text");
+                        },
+                        child: Text(
+                          "message " + a.toString() + " times",
+                          style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 0, 0, 0)),
+                        )),
+                  ),
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                Container(
+                  color: Colors.black,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 100,
+                          width: 100,
+                          color: Colors.white,
+                          child: TextButton(
+                              onPressed: () {
+                                // show_toast(Text().data);
+                              },
+                              child: const Text(
+                                "0",
+                                style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              )),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         floatingActionButton: Padding(
