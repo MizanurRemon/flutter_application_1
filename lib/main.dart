@@ -96,57 +96,159 @@ class myHomePageState extends State<HomeClass> {
     return Scaffold(
         body: Container(
           color: Colors.orange,
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Container(
-                  color: Colors.white,
-                  child: Center(
-                    child: TextButton(
-                        onPressed: () {
-                          show_toast("Its a Text");
-                        },
-                        child: Text(
-                          "message " + a.toString() + " times",
-                          style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 0, 0, 0)),
-                        )),
-                  ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Container(
-                  color: Colors.black,
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.white,
-                          child: TextButton(
-                              onPressed: () {
-                                //show_toast(myController.text);
-                                funcIncreaseVal1();
-                              },
-                              child: Text(
-                                val1.toString(),
-                                style: const TextStyle(
-                                    fontSize: 30,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              )),
-                        )
-                      ],
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Container(
+                    color: Colors.white,
+                    child: Center(
+                      child: TextButton(
+                          onPressed: () {
+                            show_toast("Its a Text");
+                          },
+                          child: Text(
+                            "message " + a.toString() + " times",
+                            style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 0, 0, 0)),
+                          )),
                     ),
                   ),
-                )
-              ],
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 100,
+                              width: 100,
+                              color: Colors.white,
+                              child: TextButton(
+                                  onPressed: () {
+                                    //show_toast(myController.text);
+                                    funcIncreaseVal1();
+                                  },
+                                  child: Text(
+                                    val1.toString(),
+                                    style: const TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  )),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 100,
+                              width: 100,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 100,
+                              width: 100,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Container(
+                              height: 100,
+                              width: 100,
+                              color: Colors.white,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.red,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.red,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.red,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    color: Colors.black,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.red,
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
