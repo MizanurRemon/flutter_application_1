@@ -64,9 +64,18 @@ class HomeClass extends StatefulWidget {
 // ignore: camel_case_types
 class myHomePageState extends State<HomeClass> {
   int a = 0;
+  int val1 = 0;
   void increaseFunc() {
     setState(() {
       a++;
+
+      //val1++;
+    });
+  }
+
+  void funcIncreaseVal1() {
+    setState(() {
+      val1++;
     });
   }
 
@@ -81,6 +90,9 @@ class myHomePageState extends State<HomeClass> {
 
   @override
   Widget build(BuildContext context) {
+    TextField(
+      controller: myController,
+    );
     return Scaffold(
         body: Container(
           color: Colors.orange,
@@ -119,11 +131,12 @@ class myHomePageState extends State<HomeClass> {
                           color: Colors.white,
                           child: TextButton(
                               onPressed: () {
-                                // show_toast(Text().data);
+                                //show_toast(myController.text);
+                                funcIncreaseVal1();
                               },
-                              child: const Text(
-                                "0",
-                                style: TextStyle(
+                              child: Text(
+                                val1.toString(),
+                                style: const TextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black),
